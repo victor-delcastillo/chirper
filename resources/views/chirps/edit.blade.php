@@ -8,7 +8,7 @@
 
     <div class="card bg-base-100 shadow mt-8">
       <div class="card-body">
-        <form method="POST" action="/chirps/{{ $chirp->id }}">
+        <form method="POST" action="/chirps/{{ $chirp->id }}/">
           @csrf
           @method('PUT')
 
