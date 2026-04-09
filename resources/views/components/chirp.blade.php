@@ -36,13 +36,16 @@
             @endif
           </div>
           
-          <div class="flex gap-1">
-            <a 
-              href="/chirps/{{ $chirp->id }}/edit" 
-              class="btn btn-ghost btn-xs">
-                Edit
-            </a>
-            <form action="/chirps/{{ $chirp->id }}" method="POST">
+          {{-- @if (auth()->check() && auth()->id() === $chirp->user_id)  --}}
+          @can('update', $chirp)
+            <!-- Edit/Delete Buttons -->
+            <div class="flex gap-1">
+              <a 
+                href="/chirps/{{ $chirp->id }}/edit" 
+                class="btn btn-ghost btn-xs">
+                  Edit
+              </a>
+              <form action="/chirps/{{ $chirp->id }}" method="POST">
               @csrf
               @method('DELETE')
               <button 
@@ -52,7 +55,8 @@
                   Delete
               </button>
             </form>
-          </div>
+            </div>
+          @endcan
         </div>
         <p class="mt-1">
             {{ $chirp->message }}
