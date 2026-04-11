@@ -89,7 +89,7 @@
           <div class="divider">OR</div>
           <p class="text-center text-sm">
             Already have an account?
-            <a href="/login" class="link link-primary">Sign In</a>
+            <a href="{{ route('login') }}" class="link link-primary">Sign In</a>
           </p>
         </div>
       </div>

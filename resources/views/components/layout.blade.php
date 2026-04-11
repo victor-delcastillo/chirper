@@ -19,14 +19,14 @@
         <span class="text-sm">
           {{ auth()->user()->name }}
         </span>
-        <form action="/logout" method="POST" class="inline">
+        <form action="{{ route('logout') }}" method="POST" class="inline">
           @csrf
           <button type="submit" class="btn btn-ghost btn-sm">
             Logout
           </button>
         </form>
       @else
-        <a href="/login" class="btn btn-ghost btn-sm">Sign In</a>
+        <a href="{{ route('login') }}" class="btn btn-ghost btn-sm">Sign In</a>
         <a href="{{ route('register') }}" class="btn-btn-primary btn-sm">Sign Up</a>
       @endauth
     </div>
