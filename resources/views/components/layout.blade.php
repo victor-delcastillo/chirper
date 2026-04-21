@@ -98,7 +98,7 @@
   </main>
 
   <footer class="w-full mt-24">
-    <div class="mx-auto w-full max-w-[1400px] px-4 xl:px-16">
+    <div class="mx-auto w-full max-w-laravel px-4 xl:px-16">
       <svg class="block w-full h-auto text-base-content opacity-8" viewBox="0 0 1280 308" aria-hidden="true"
           focusable="false">
           <path d="M50.2753 0H0V308.689H144.713V263.27H50.2753V0Z" fill="currentColor" />
