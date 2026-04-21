@@ -4,6 +4,8 @@
 
     --animate-fade-out: fade-out 4s ease-in-out forwards;
 
+    --spacing-laravel: 1400px;
+    
     @keyframes fade-out {
       0%, 70% {
         opacity: 1;
